@@ -43,11 +43,7 @@ longitud("Hola") //=> 4
 longitud("You Rock") //=> 8 (contando el espacio)*/
 
 function longitud(cadena) {
-  if (typeof cadena !== "string") {
-    return -1;
-  } else {
-    return cadena.length;
-  }
+  return cadena.length;
 }
 
 console.log(longitud(""));
@@ -60,11 +56,7 @@ console.log(longitud("You Rock"));
 getBMI(65, 1.8) // => "Tu BMI es 20.061728395061728"*/
 
 function getBMI(peso, altura) {
-  if (altura === 0) {
-    console.log(`La altura no puede ser 0`);
-  } else {
-    console.log(`Tu BMI es ${peso / altura ** 2}`);
-  }
+  console.log(`Tu BMI es ${peso / altura ** 2}`);
   return;
 }
 
