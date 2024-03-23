@@ -1,63 +1,43 @@
-//ejercicio 3
-/* Crear una función llamada isAlive que reciba dos argumentos llamados playerName y points
+// EJERCICIO 07
+/*Crear una función sum que devuelva la suma de todos sus argumentos
 
-isAlive debe retornar verdadero si playerName es igual a "ikk" y points es mayor a 30, o si playerName es igual a "gut" y points es mayor a 10. De lo contrario, debe retornar falso.*/
+sum(1, 2, 3) // => 6
+sum(8, 2) // => 10
+sum(1, 2, 3, 4, 5) // => 15*/
 
-function isAlive(playerName, points) {
-  if (playerName === "ikk" && points > 30) {
-    return true;
-  } else {
-    if (playerName === "gut" && points > 10) {
-      return true;
-    } else {
-      return false;
-    }
+function sum(...numeros) {
+  let sum = 0;
+  for (let i = 0; i < numeros.length; i++) {
+    sum += numeros[i];
   }
+  return sum;
 }
 
-console.log(isAlive("ikk", 20));
-console.log(isAlive("ikk", 50)); //=> true
-console.log(isAlive("gut", 50)); //=> true
-console.log(isAlive("ikk", 20)); //=> false
-console.log(isAlive("gut", 5)); //=> false
-console.log(isAlive("trek", 50)); //=> false
+console.log(sum(1, 2, 3));
+console.log(sum(8, 2));
+console.log(sum(1, 2, 3, 4, 5));
 
-/*Escribir una función llamada factorial que retorne el factorial de un número, que es la multiplicación de los números (positivos) menores o iguales a ese número.
+// EJERCICIO 08
+/*El siguiente código no funciona de manera correcta, intente encontrar el error
 
-Por ejemplo, el factorial de 5 (se escribe 5!) es 120:*/
-
-function factorial(num) {
-  let factorial = 1;
-  for (let i = 1; i <= num; i++) {
-    factorial = factorial * i;
-  }
-  return factorial;
-}
-console.log(factorial(2));
-
-// EJERCICIO 05
-/*Crear una función longitud que encuentre la longitud de una cadena (string)
-
-longitud("") //=> 0
-longitud("Hola") //=> 4
-longitud("You Rock") //=> 8 (contando el espacio)*/
-
-function longitud(cadena) {
-  return cadena.length;
+function multiply(a, b){
+  a * b
 }
 
-console.log(longitud(""));
-console.log(longitud("Hola"));
-console.log(longitud("You Rock"));
-
-// EJERCICIO 06
-/* Crear una función getBMI que le pida al usuario su peso y su altura para calcular su BMI e imprima la frase "Tu BMI es X". P.D BMI por sus siglas en inglés, es un valor que determina la cantidad de grasa de una persona y se calcula con peso / altura^2
-
-getBMI(65, 1.8) // => "Tu BMI es 20.061728395061728"*/
-
-function getBMI(peso, altura) {
-  console.log(`Tu BMI es ${peso / altura ** 2}`);
-  return;
+multiply(2, 2) // => 4*/
+function multiply(a, b) {
+  return a * b;
 }
 
+console.log(multiply(2, 2));
+
+// EJERCICIO 09
+/*Escriba la definición de la función "say" usando el siguiente formato(Debe retornar el string "Hello World"):
+
+say("Hello")("World") // => "Hello World"*/
+function say(str1, str2) {
+  return str1 + " " + str2;
+}
+
+console.log(say("Hello", "World"));
 getBMI(65, 1.8);
